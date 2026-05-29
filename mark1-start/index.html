@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KAELIX by ANSAR â€” A premium digital product studio crafting cinematic apps, websites, branding, and intelligent experiences." />
+  <title>KAELIX | Powered by ANSAR</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS Files (Order Matters: Global first, then sections) -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true"><span>KAELIX</span></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-text">KAELIX<span>· ANSAR</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Get Started</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <div id="home-container"></div>
+    <div id="services-container"></div>
+    <div id="portfolio-container"></div>
+    <div id="about-container"></div>
+    <div id="contact-container"></div>
+  </main>
+
+  <!-- Mobile app dock (one screen at a time on phone) -->
+  <nav class="app-dock" id="appDock" aria-label="Section navigation">
+    <button type="button" class="dock-btn is-active" data-view="home" aria-current="page">
+      <i class="fa-solid fa-house" aria-hidden="true"></i>
+      <span>Home</span>
+    </button>
+    <button type="button" class="dock-btn" data-view="services">
+      <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+      <span>Services</span>
+    </button>
+    <button type="button" class="dock-btn" data-view="portfolio">
+      <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+      <span>Work</span>
+    </button>
+    <button type="button" class="dock-btn" data-view="about">
+      <i class="fa-solid fa-users" aria-hidden="true"></i>
+      <span>Studio</span>
+    </button>
+    <button type="button" class="dock-btn" data-view="contact">
+      <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+      <span>Contact</span>
+    </button>
+  </nav>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="siteFooter">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">KAELIX<span>· ANSAR</span></span>
+      </div>
+      <p class="footer-copy">&copy; 2026 KAELIX · ANSAR. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Section templates (instant load) -->
+<template id="tpl-home">
+<section id="home">
+  <div class="hero-mesh" aria-hidden="true">
+    <div class="mesh-orb mesh-orb--burgundy"></div>
+    <div class="mesh-orb mesh-orb--gold"></div>
+    <div class="mesh-line"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-tag hero-anim" style="--i:0">KAELIX · Powered by ANSAR</span>
+      <h1 class="hero-anim" style="--i:1">
+        <span class="line">Technology with</span>
+        <span class="line line-accent">cinematic precision.</span>
+      </h1>
+      <p class="hero-anim" style="--i:2">
+        A next-generation digital product studio — strategy, design, engineering,
+        AI, and media for brands that demand unforgettable execution.
+      </p>
+      <div class="hero-buttons hero-anim" style="--i:3">
+        <a href="#contact" class="btn-primary" data-goto="contact">Start a Project</a>
+        <a href="#portfolio" class="btn-secondary" data-goto="portfolio">Explore Work</a>
+      </div>
+      <div class="tech-stack tech-stack--desktop hero-anim" style="--i:4">
+        <span>Flutter</span><span>Firebase</span><span>React</span>
+        <span>UI/UX</span><span>Figma</span><span>AI Systems</span>
+      </div>
+    </div>
+
+    <div class="hero-stage hero-capabilities--desktop hero-anim" style="--i:2" aria-label="Studio capabilities">
+      <div class="stage-glow" aria-hidden="true"></div>
+      <article class="cap-card" data-cap="0">
+        <span class="cap-num">01</span>
+        <h3>App Development</h3>
+        <p>Android &amp; iOS products</p>
+      </article>
+      <article class="cap-card" data-cap="1">
+        <span class="cap-num">02</span>
+        <h3>Web Development</h3>
+        <p>Modern digital systems</p>
+      </article>
+      <article class="cap-card" data-cap="2">
+        <span class="cap-num">03</span>
+        <h3>Branding &amp; Design</h3>
+        <p>Identity &amp; visual systems</p>
+      </article>
+      <article class="cap-card" data-cap="3">
+        <span class="cap-num">04</span>
+        <h3>Creative Media</h3>
+        <p>Cinematic storytelling</p>
+      </article>
+      <div class="stage-core">KAELIX</div>
+    </div>
+
+    <nav class="hero-hub hero-anim" style="--i:3" aria-label="Explore KAELIX">
+      <button type="button" class="hub-card" data-goto="services">
+        <span class="hub-num">01</span>
+        <strong>Services</strong>
+        <small>What we build</small>
+      </button>
+      <button type="button" class="hub-card" data-goto="portfolio">
+        <span class="hub-num">02</span>
+        <strong>Portfolio</strong>
+        <small>Selected work</small>
+      </button>
+      <button type="button" class="hub-card" data-goto="about">
+        <span class="hub-num">03</span>
+        <strong>Studio</strong>
+        <small>Founders &amp; ethos</small>
+      </button>
+      <button type="button" class="hub-card" data-goto="contact">
+        <span class="hub-num">04</span>
+        <strong>Contact</strong>
+        <small>Start a project</small>
+      </button>
+    </nav>
+  </div>
+
+  <div class="scroll-hint hero-anim" style="--i:5" aria-hidden="true"><span></span></div>
+</section>
+</template>
+
+<template id="tpl-services">
+<section id="services">
+  <div class="services-bg-orb-1"></div>
+  <div class="services-bg-orb-2"></div>
+
+  <div class="services-header">
+    <span class="section-tag">What We Do</span>
+    <h1 class="section-title">
+      Premium Services<br>
+      <span>Crafted With Precision</span>
+    </h1>
+    <p class="section-sub">
+      From concept to launch, we deliver end-to-end digital solutions
+      tailored to your vision. Every pixel. Every line of code. Every frame.
+    </p>
+  </div>
+
+  <div class="services-bento">
+    <article class="service-card">
+      <div class="service-icon">AP</div>
+      <h2>App Development</h2>
+      <p>
+        Cross-platform mobile apps built with Flutter and Firebase &mdash;
+        smooth, fast, and production-ready for Android &amp; iOS.
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">Flutter</span>
+        <span class="service-tag">Firebase</span>
+        <span class="service-tag">Android</span>
+        <span class="service-tag">iOS</span>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">WB</div>
+      <h2>Web Development</h2>
+      <p>
+        Modern, responsive websites and web apps with stunning visuals,
+        blazing performance, and clean architecture.
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">HTML/CSS</span>
+        <span class="service-tag">JavaScript</span>
+        <span class="service-tag">React</span>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">UX</div>
+      <h2>UI/UX Design</h2>
+      <p>
+        Pixel-perfect interfaces and intuitive user experiences designed
+        in Figma &mdash; beautiful, functional, and user-centric.
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">Figma</span>
+        <span class="service-tag">Prototyping</span>
+        <span class="service-tag">Wireframing</span>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">BR</div>
+      <h2>Branding &amp; Identity</h2>
+      <p>
+        Full brand identity creation &mdash; logos, colour palettes, typography,
+        and brand guidelines that tell your story powerfully.
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">Logo Design</span>
+        <span class="service-tag">Brand Kit</span>
+        <span class="service-tag">Style Guide</span>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">GD</div>
+      <h2>Poster &amp; Graphic Design</h2>
+      <p>
+        Eye-catching posters, social media creatives, banners, and
+        marketing materials that demand attention and drive engagement.
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">Photoshop</span>
+        <span class="service-tag">Illustrator</span>
+        <span class="service-tag">Canva Pro</span>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">MD</div>
+      <h2>Video &amp; Creative Media</h2>
+      <p>
+        Cinematic video editing, reels, motion graphics, and creative
+        media production that makes your brand unforgettable.
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">Premiere Pro</span>
+        <span class="service-tag">After Effects</span>
+        <span class="service-tag">Reels</span>
+      </div>
+    </article>
+  </div>
+</section>
+</template>
+
+
+
+<template id="tpl-portfolio">
+<section id="portfolio">
+  <div class="portfolio-bg-orb"></div>
+
+  <div class="portfolio-header">
+    <span class="section-tag">Our Work</span>
+    <h1 class="section-title">
+      Projects That <span>Speak for Themselves</span>
+    </h1>
+    <p class="section-sub">
+      A curated selection of our finest work &mdash; apps, websites, brands,
+      and creative media built with passion and precision.
+    </p>
+    <p class="portfolio-rail-hint">Scroll horizontally to browse all projects &rarr;</p>
+  </div>
+
+  <div class="portfolio-rail" tabindex="0">
+    <article class="portfolio-card">
+      <div class="portfolio-thumb" style="--grad: linear-gradient(135deg, #650108 0%, #2B2B2B 100%);">
+        <div class="portfolio-thumb-inner"></div>
+        <span class="portfolio-thumb-icon">APP</span>
+        <div class="portfolio-overlay"><span class="view-btn">View Project</span></div>
+      </div>
+      <div class="portfolio-body">
+        <p class="portfolio-category">App Development</p>
+        <h2>ShopEase &mdash; E-Commerce App</h2>
+        <p>A full-featured Flutter e-commerce app with Firebase backend, real-time cart, and payment integration.</p>
+        <div class="portfolio-tech-tags">
+          <span class="p-tag">Flutter</span><span class="p-tag">Firebase</span><span class="p-tag">Razorpay</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-thumb" style="--grad: linear-gradient(135deg, #2B2B2B 0%, #650108 100%);">
+        <div class="portfolio-thumb-inner"></div>
+        <span class="portfolio-thumb-icon">WEB</span>
+        <div class="portfolio-overlay"><span class="view-btn">View Project</span></div>
+      </div>
+      <div class="portfolio-body">
+        <p class="portfolio-category">Web Development</p>
+        <h2>NexaFlow &mdash; SaaS Landing Page</h2>
+        <p>A high-converting SaaS product landing page with dark glassmorphism design and smooth scroll animations.</p>
+        <div class="portfolio-tech-tags">
+          <span class="p-tag">HTML/CSS</span><span class="p-tag">JavaScript</span><span class="p-tag">GSAP</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-thumb" style="--grad: linear-gradient(135deg, #C8A97E 0%, #650108 100%);">
+        <div class="portfolio-thumb-inner"></div>
+        <span class="portfolio-thumb-icon">BRD</span>
+        <div class="portfolio-overlay"><span class="view-btn">View Project</span></div>
+      </div>
+      <div class="portfolio-body">
+        <p class="portfolio-category">Branding &amp; Identity</p>
+        <h2>UrbanBrew &mdash; Cafe Brand Identity</h2>
+        <p>Complete brand identity for a premium urban cafe &mdash; logo, colour system, packaging design, and style guide.</p>
+        <div class="portfolio-tech-tags">
+          <span class="p-tag">Logo Design</span><span class="p-tag">Illustrator</span><span class="p-tag">Brand Kit</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-thumb" style="--grad: linear-gradient(135deg, #111111 0%, #C8A97E 100%);">
+        <div class="portfolio-thumb-inner"></div>
+        <span class="portfolio-thumb-icon">UX</span>
+        <div class="portfolio-overlay"><span class="view-btn">View Project</span></div>
+      </div>
+      <div class="portfolio-body">
+        <p class="portfolio-category">UI/UX Design</p>
+        <h2>MedTrack &mdash; Health App UI</h2>
+        <p>A clean, intuitive health tracking app design with Figma &mdash; complete prototype with micro-interactions.</p>
+        <div class="portfolio-tech-tags">
+          <span class="p-tag">Figma</span><span class="p-tag">Prototyping</span><span class="p-tag">UI Kit</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-thumb" style="--grad: linear-gradient(135deg, #650108 0%, #C8A97E 100%);">
+        <div class="portfolio-thumb-inner"></div>
+        <span class="portfolio-thumb-icon">ART</span>
+        <div class="portfolio-overlay"><span class="view-btn">View Project</span></div>
+      </div>
+      <div class="portfolio-body">
+        <p class="portfolio-category">Poster &amp; Graphics</p>
+        <h2>EventX &mdash; Event Promotion Series</h2>
+        <p>A series of 12 premium event posters and social media graphics for a youth event management company.</p>
+        <div class="portfolio-tech-tags">
+          <span class="p-tag">Photoshop</span><span class="p-tag">Social Media</span><span class="p-tag">Print</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <div class="portfolio-thumb" style="--grad: linear-gradient(135deg, #2B2B2B 0%, #4a0106 100%);">
+        <div class="portfolio-thumb-inner"></div>
+        <span class="portfolio-thumb-icon">FILM</span>
+        <div class="portfolio-overlay"><span class="view-btn">View Project</span></div>
+      </div>
+      <div class="portfolio-body">
+        <p class="portfolio-category">Video &amp; Creative Media</p>
+        <h2>VisionReel &mdash; Brand Films</h2>
+        <p>A series of cinematic brand reveal videos and short-form reels with motion graphics and sound design.</p>
+        <div class="portfolio-tech-tags">
+          <span class="p-tag">Premiere Pro</span><span class="p-tag">After Effects</span><span class="p-tag">Motion</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</template>
+
+<template id="tpl-about">
+<section id="about">
+  <div class="about-bg-circle about-circle-1"></div>
+  <div class="about-bg-circle about-circle-2"></div>
+
+  <div class="studio-profile">
+    <div class="studio-profile-header">
+      <span class="section-tag">About ANSAR</span>
+      <h1>
+        A founder-led studio for brands that need
+        <span>serious digital execution.</span>
+      </h1>
+      <p>
+        ANSAR brings product strategy, interface design, engineering, AI
+        integration, brand systems, and media production into one operating
+        team. One team, one direction, and one polished digital presence.
+      </p>
+    </div>
+
+    <div class="studio-principles">
+      <div>
+        <span>01</span>
+        <h2>Strategy before screens</h2>
+        <p>We define the audience, offer, message, and conversion path before visual polish begins.</p>
+      </div>
+      <div>
+        <span>02</span>
+        <h2>Design with restraint</h2>
+        <p>Every page should feel expensive because it is clear, not because it is overloaded.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <h2>Build for launch</h2>
+        <p>Apps, websites, AI systems, and brand assets are prepared for actual use, not just presentation.</p>
+      </div>
+    </div>
+
+    <div class="founder-board">
+      <div class="founder-board-intro">
+        <span class="section-tag">Founder Board</span>
+        <h2>Meet the people responsible for delivery.</h2>
+        <p>
+          Each founder owns a clear part of the studio. Use the social buttons
+          here for direct founder access, and keep the Contact section for
+          official studio enquiries.
+        </p>
+      </div>
+
+      <div class="founder-carousel-ui">
+        <button type="button" class="fc-btn" id="founderPrev" aria-label="Previous founder">&larr;</button>
+        <span class="fc-count" id="founderCount">01 / 05</span>
+        <button type="button" class="fc-btn" id="founderNext" aria-label="Next founder">&rarr;</button>
+      </div>
+
+      <div class="founder-rail" id="founderRail" tabindex="0">
+        <article class="founder-card">
+          <div class="founder-photo">
+            <img src="https://i.postimg.cc/CL3MZ5cG/IMG-20260516-WA0115.jpg" alt="Mohammed Nabeel, CEO of ANSAR" loading="lazy" decoding="async" data-focus="high">
+          </div>
+          <div class="founder-card-body">
+            <span class="founder-role">CEO</span>
+            <h3>Mohammed Nabeel</h3>
+            <p>Strategy, brand direction, business growth, and client leadership.</p>
+            <div class="founder-socials">
+              <a href="https://wa.me/918089920551" target="_blank" rel="noopener" aria-label="Mohammed Nabeel on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.4 13.3L3.8 21l4.8-1.2A8.7 8.7 0 1 0 12 3Z"/><path d="M8.7 8.4c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.4c0 .4-.2.7-.5.9-.5.3-1.1.5-1.8.4-3.2-.4-6.4-3.4-6.9-6.7-.1-.5.1-1 .3-1.2Z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Mohammed Nabeel on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.8" cy="7.2" r="0.8"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Mohammed Nabeel on X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Mohammed Nabeel on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 10v8M6.5 6.5v.1M11 18v-8M11 13.5c0-2 1.3-3.7 3.5-3.7s3.5 1.5 3.5 4.1V18"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="founder-card">
+          <div class="founder-photo">
+            <img src="https://i.postimg.cc/y83J52bx/IMG-20260516-WA0114.jpg" alt="Atul K Shaiju, CTO of ANSAR" loading="lazy" decoding="async" data-focus="high">
+          </div>
+          <div class="founder-card-body">
+            <span class="founder-role">CTO</span>
+            <h3>Atul K Shaiju</h3>
+            <p>App development, backend architecture, and technical systems.</p>
+            <div class="founder-socials">
+              <a href="https://wa.me/917736240243" target="_blank" rel="noopener" aria-label="Atul K Shaiju on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.4 13.3L3.8 21l4.8-1.2A8.7 8.7 0 1 0 12 3Z"/><path d="M8.7 8.4c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.4c0 .4-.2.7-.5.9-.5.3-1.1.5-1.8.4-3.2-.4-6.4-3.4-6.9-6.7-.1-.5.1-1 .3-1.2Z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Atul K Shaiju on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.8" cy="7.2" r="0.8"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Atul K Shaiju on X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Atul K Shaiju on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 10v8M6.5 6.5v.1M11 18v-8M11 13.5c0-2 1.3-3.7 3.5-3.7s3.5 1.5 3.5 4.1V18"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="founder-card">
+          <div class="founder-photo">
+            <img src="https://i.postimg.cc/tJ7R6x0n/IMG-20260516-WA0069.jpg" alt="Sayuj Krishna, CAIO of ANSAR" loading="lazy" decoding="async" data-focus="mid">
+          </div>
+          <div class="founder-card-body">
+            <span class="founder-role">CAIO</span>
+            <h3>Sayuj Krishna</h3>
+            <p>Web development, AI integration, automation, and intelligent workflows.</p>
+            <div class="founder-socials">
+              <a href="https://wa.me/919526232174" target="_blank" rel="noopener" aria-label="Sayuj Krishna on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.4 13.3L3.8 21l4.8-1.2A8.7 8.7 0 1 0 12 3Z"/><path d="M8.7 8.4c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.4c0 .4-.2.7-.5.9-.5.3-1.1.5-1.8.4-3.2-.4-6.4-3.4-6.9-6.7-.1-.5.1-1 .3-1.2Z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Sayuj Krishna on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.8" cy="7.2" r="0.8"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Sayuj Krishna on X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Sayuj Krishna on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 10v8M6.5 6.5v.1M11 18v-8M11 13.5c0-2 1.3-3.7 3.5-3.7s3.5 1.5 3.5 4.1V18"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="founder-card">
+          <div class="founder-photo">
+            <img src="https://i.postimg.cc/8kfq7H9v/IMG-20260516-WA0068.jpg" alt="Aadith Riby, COO of ANSAR" loading="lazy" decoding="async" data-focus="high">
+          </div>
+          <div class="founder-card-body">
+            <span class="founder-role">COO</span>
+            <h3>Aadith Riby</h3>
+            <p>Operations, UI/UX design, product direction, and delivery planning.</p>
+            <div class="founder-socials">
+              <a href="https://wa.me/918921279899" target="_blank" rel="noopener" aria-label="Aadith Riby on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.4 13.3L3.8 21l4.8-1.2A8.7 8.7 0 1 0 12 3Z"/><path d="M8.7 8.4c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.4c0 .4-.2.7-.5.9-.5.3-1.1.5-1.8.4-3.2-.4-6.4-3.4-6.9-6.7-.1-.5.1-1 .3-1.2Z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Aadith Riby on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.8" cy="7.2" r="0.8"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Aadith Riby on X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Aadith Riby on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 10v8M6.5 6.5v.1M11 18v-8M11 13.5c0-2 1.3-3.7 3.5-3.7s3.5 1.5 3.5 4.1V18"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="founder-card">
+          <div class="founder-photo">
+            <img src="https://i.postimg.cc/26SCpZS2/IMG-20260516-WA0058.jpg" alt="Rohith Shelvin, CCO of ANSAR" loading="lazy" decoding="async" data-focus="mid">
+          </div>
+          <div class="founder-card-body">
+            <span class="founder-role">CCO</span>
+            <h3>Rohith Shelvin</h3>
+            <p>Creative media, video production, visual systems, and content direction.</p>
+            <div class="founder-socials">
+              <a href="https://wa.me/919539686541" target="_blank" rel="noopener" aria-label="Rohith Shelvin on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a8.7 8.7 0 0 0-7.4 13.3L3.8 21l4.8-1.2A8.7 8.7 0 1 0 12 3Z"/><path d="M8.7 8.4c.2-.4.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.6v.4c0 .4-.2.7-.5.9-.5.3-1.1.5-1.8.4-3.2-.4-6.4-3.4-6.9-6.7-.1-.5.1-1 .3-1.2Z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Rohith Shelvin on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.8" cy="7.2" r="0.8"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Rohith Shelvin on X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Rohith Shelvin on LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 10v8M6.5 6.5v.1M11 18v-8M11 13.5c0-2 1.3-3.7 3.5-3.7s3.5 1.5 3.5 4.1V18"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+</template>
+
+
+
+<template id="tpl-contact">
+<section id="contact">
+  <div class="contact-rings ring-1"></div>
+  <div class="contact-rings ring-2"></div>
+
+  <div class="contact-inner">
+    <span class="section-tag">Contact</span>
+    <h2 class="contact-title">Tell us what you are building.</h2>
+    <p class="contact-subtitle">
+      Contact ANSAR through email, phone, or WhatsApp. We will route it to
+      the right founder and get back to you within 24 hours. We look forward
+      to hearing from you!
+    </p>
+    <div class="contact-icons">
+      <a href="mailto:hello@ansar.studio" class="contact-icon" aria-label="Send email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="tel:+918089920551" class="contact-icon" aria-label="Call phone">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="https://wa.me/918089920551" target="_blank" rel="noopener" class="contact-icon" aria-label="Open WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</section>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

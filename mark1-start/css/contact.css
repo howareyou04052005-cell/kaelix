@@ -1,0 +1,183 @@
+/* =========================================================
+   KAELIX — Contact Section
+   ========================================================= */
+
+#contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-y) clamp(20px, 4vw, 48px);
+  text-align: center;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: var(--burgundy);
+  filter: blur(120px);
+  opacity: 0.14;
+  top: -80px;
+  right: -80px;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+#contact::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: var(--gold);
+  filter: blur(100px);
+  opacity: 0.06;
+  bottom: -60px;
+  left: -60px;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, rgba(43, 43, 43, 0.45) 0%, rgba(17, 17, 17, 0.8) 100%);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: var(--ivory);
+}
+
+.contact-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.6);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 249, 0.04);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.contact-icon:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: linear-gradient(135deg, var(--burgundy), var(--burgundy-deep));
+  border-color: rgba(200, 169, 126, 0.3);
+  box-shadow: 0 16px 40px rgba(101, 1, 8, 0.35);
+}
+
+.contact-icon i {
+  font-size: 22px;
+  color: var(--cream);
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover i {
+  color: var(--ivory);
+}
+
+.contact-rings {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.ring-1 {
+  width: 280px;
+  height: 280px;
+  top: 20%;
+  left: 8%;
+  background: var(--burgundy);
+}
+
+.ring-2 {
+  width: 220px;
+  height: 220px;
+  bottom: 15%;
+  right: 8%;
+  background: var(--gold);
+}
+
+body.is-mobile-app #contact {
+  padding: 20px;
+}
+
+body.is-mobile-app .contact-inner {
+  width: 100%;
+  max-width: 400px;
+}
+
+body.is-mobile-app .contact-title {
+  font-size: 28px;
+}
+
+body.is-mobile-app .contact-subtitle {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+  }
+
+  .contact-inner {
+    padding: 24px 20px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-icon i {
+    font-size: 20px;
+  }
+
+  .contact-rings {
+    display: none;
+  }
+}
